@@ -24,6 +24,11 @@ Configuration dscconf
         Ensure = "Present"
     }
     
-
+    WindowsFeature NETFrameworkFeatures
+    {
+        Name = "NET-Framework-Features"
+        Ensure = "Present"
+    }
+    
   }
 } 
