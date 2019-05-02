@@ -6,7 +6,7 @@
         "value": "adVNET"
       },
       "existingSubnetName": {
-        "value": "/subscriptions/a9ab2198-f5a6-4e71-a979-6043272806a3/resourceGroups/AAD_ADFS/providers/Microsoft.Network/virtualNetworks/AAD_ADFS/subnets/adSubnet"
+        "value": "/subscriptions/a9ab2198-f5a6-4e71-a979-6043272806a3/resourceGroups/prod-net-rg/providers/Microsoft.Network/virtualNetworks/adVNET/subnets/adSubnet"
       },
       "vmSize": {
         "value": "Standard_DS12_v2"
@@ -42,7 +42,7 @@
    }
       },
       "modulesUrl": {
-        "value": "https://github.com/Azure/azure-quickstart-templates/raw/master/dsc-extension-iis-server-windows-vm/ContosoWebsite.ps1.zip"
+        "value": "https://github.com/temores/templates/raw/master/dscconf.zip"
     },
     "configurationFunction": {
         "value": "dscconf.ps1\\dscconf"
