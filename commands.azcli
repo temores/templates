@@ -1,0 +1,11 @@
+az group create --name prod-app1-rg --location eastus2 #use this command when you need to create a new resource group for your deployment
+
+az group deployment create --resource-group prod-dcs-rg --template-file WEBapp.json --parameters WEBappparameters.json --name webapp --no-wait
+az group deployment create --resource-group prod-dcs-rg --template-file WEBapi.json --parameters WEBapiparameters.json --name webapi --no-wait
+az group deployment create --resource-group prod-dcs-rg --template-file db.json --parameters dbparameters.json --name db --no-wait
+az group deployment create --resource-group prod-dcs-rg --template-file dw.json --parameters dwparameters.json --name dw --no-wait
+az group deployment create --resource-group prod-dcs-rg --template-file batch.json --parameters batchparameters.json --name batch --no-wait
+az group deployment create --resource-group prod-dcs-rg --template-file report.json --parameters reportparameters.json --name report --no-wait
+
+
+az group deployment create --resource-group prod-app1-rg --template-file report.json --parameters reportparameters.json --name report --no-wait

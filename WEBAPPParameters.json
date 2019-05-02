@@ -1,0 +1,57 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "existingVNETName": {
+      "value": "adVNET"
+    },
+    "existingSubnetName": {
+      "value": "adSubnet"
+    },
+    "vmSize": {
+      "value": "Standard_DS12_v2"
+    },
+    "domainToJoin": {
+      "value": "temores.net"
+    },
+    "domainUsername": {
+      "value": "adrian"
+    },
+    "domainPassword": {
+      "reference": {
+        "keyVault": {
+           "id": "/subscriptions/a9ab2198-f5a6-4e71-a979-6043272806a3/resourceGroups/keyvault/providers/Microsoft.KeyVault/vaults/temores"
+     
+ },
+
+ "secretname": "admin"
+ }
+    },
+    "domainJoinOptions": {
+      "value": 3
+    },
+    "modulesUrl": {
+      "value": "https://github.com/Azure/azure-quickstart-templates/raw/master/dsc-extension-iis-server-windows-vm/ContosoWebsite.ps1.zip"
+  },
+  "configurationFunction": {
+      "value": "ContosoWebsite.ps1\\ContosoWebsite"
+  },
+    "vmAdminUsername": {
+      "value": "adrian"
+    },
+    "vmAdminPassword": {
+      "reference": {
+        "keyVault": {
+           "id": "/subscriptions/a9ab2198-f5a6-4e71-a979-6043272806a3/resourceGroups/keyvault/providers/Microsoft.KeyVault/vaults/temores"
+     
+ },
+
+ "secretname": "admin"
+ }
+    },
+    "dnsLabelPrefix": {
+      "value": "temoreswebapp" 
+    }
+  }
+}
+
