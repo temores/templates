@@ -48,7 +48,7 @@
         "value": "dscconf.ps1\\dscconf"
     },
       "dnsLabelPrefix": {
-        "value": "temoresreport" 
+        "value": "temores__ENV__report__ENVVER__" 
       }
     }
   }
